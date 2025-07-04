@@ -118,7 +118,7 @@ python scripts/enrich_franchise.py       --input  input/franchise_input.xlsx    
 See `architecture.png` + `ARCHITECTURE.md` for details.
 
 
-# Sample “url Sources” Outputs
+## Sample “url Sources” Outputs
 
 These rows illustrate the kinds of source links the enrichment pipeline
 collects (OpenCorporates, professional directories, company contact pages).
