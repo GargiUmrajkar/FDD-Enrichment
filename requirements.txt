@@ -1,0 +1,11 @@
+openpyxl
+pandas
+python-dotenv
+openai
+stagehand
+playwright
+pydantic
+requests
+
+
+
