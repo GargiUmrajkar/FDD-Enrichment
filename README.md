@@ -1,7 +1,7 @@
 
 # Franchisee Agentic Enrichment Pipeline
 
-Accelerate FDD analysis by turning a raw FDD information table into a fully-enriched, prospect-ready dataset—complete with corporate roll-ups, owner  details, contact info and a built-in confidence score—in one run.
+Accelerate FDD analysis by turning a raw FDD information table into a fully-enriched, prospect-ready dataset-complete with corporate roll-ups, owner  details, contact info and a built-in confidence score - in one run.
 
 **What the pipeline adds**
 
