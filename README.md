@@ -117,6 +117,30 @@ python scripts/enrich_franchise.py       --input  input/franchise_input.xlsx    
 
 See `architecture.png` + `ARCHITECTURE.md` for details.
 
+
+# Sample “url Sources” Outputs
+
+These rows illustrate the kinds of source links the enrichment pipeline
+collects (OpenCorporates, professional directories, company contact pages).
+
+| Example Row | URL |
+|-------------|-----|
+| **Row 1** | https://opencorporates.com/companies/us_tx/0090725202 |
+|           | https://www.texasbar.com/attorneys/member.cfm?id=222487 |
+| **Row 2** | https://www.goldenchick.com/contact-us |
+|           | https://opencorporates.com/companies/us_tx/0801979572 |
+| **Row 3** | https://www.zoominfo.com/pic/golden-tree-maintenance/371566340 |
+|           | https://www.tad.org/search-results?searchType=GeoReference&query=35112 |
+|           | https://opencorporates.com/companies/us_tx/0802771753 |
+|           | http://goldentreematerials.com/contact-us/ |
+|           | http://goldentreemaintenance.com/contact-us/ |
+| **Row 4** | https://www.yellowpages.com/belton-tx/mip/bo-stover-enterprises-inc-483305366 |
+|           | https://opencorporates.com/companies/us_tx/0802323589 |
+
+> These links are **examples only** and not required to run the code. They serve
+> as reference for reviewers who want to see typical enrichment sources.
+
+
 ---
 
 ## License
