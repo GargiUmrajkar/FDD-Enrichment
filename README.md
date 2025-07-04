@@ -17,18 +17,18 @@ Instantly transform the raw, machine-extracted location table from a Franchise D
 The script assumes the standard FDD location extract with the columns below
 (**bold = actually used for enrichment**):
 
-| Column               | Example                | Used? | Notes |
-|----------------------|------------------------|-------|-------|
-| `FDD`                | *“Golden Chick”*       | —     | Brand, informational |
-| `FDD Store No.`      | — _(empty)_            | -     | Ignore if blank|
-| `FDD Location Name`  | — _(empty)_            | —     | Ignored if blank |
-| **`Franchisee`**     | *“Bo Stover, LLC”*     | Yes   | Owner or LLC name (core lookup key) |
-| `FDD Contact Name`   | — _(empty)_            | —     | Not used |
-| `Address`            | *“1001 W University Dr.”* | -  | Preserved |
-| `City`               | *“McKinney”*           | —     | Preserved but not used |
-| **`State`**          | *“TX”*                 | Yes   | Two-letter US abbreviation Used |
-| `Zip`                | *75069*                | —     | Preserved |
-| `Phone`              | *(972) 548-9600*       | —     | Preserved |
+| Column               | Example                | Notes |
+|----------------------|------------------------|-------|
+| `FDD`                | *“Golden Chick”*       | Brand, informational |
+| `FDD Store No.`      | — _(empty)_            | Ignore if blank|
+| `FDD Location Name`  | — _(empty)_            | Ignored if blank |
+| **`Franchisee`**     | *“Bo Stover, LLC”*     | Owner or LLC name (core lookup key) |
+| `FDD Contact Name`   | — _(empty)_            | Not used |
+| `Address`            | *“1001 W University Dr.”* | Preserved |
+| `City`               | *“McKinney”*           | Preserved |
+| **`State`**          | *“TX”*                 | Two-letter US abbreviation Used (core lookup key) |
+| `Zip`                | *75069*                | Preserved |
+| `Phone`              | *(972) 548-9600*       | Preserved |
 
 All other columns in the sheet are passed through unchanged.
 
@@ -75,11 +75,15 @@ cp .env.example .env
 #   BROWSERBASE_API_KEY=<browserbase key>
 ```
 
-> **Why Browserbase variables?** Stagehand spins up a cloud browser session
-> through Browserbase.  You must create a free Browserbase account, create a
-> project (ID 6 in the free plan), and generate an **API key**.  Stagehand
-> reads `BROWSERBASE_PROJECT_ID` & `BROWSERBASE_API_KEY` from the environment
-> to authenticate.
+> **Where to get the keys:**
+
+• OpenAI (MODEL_API_KEY) – create an API key at https://platform.openai.com/account/api-keys
+
+• Perplexity – request a Sonar API key via https://www.perplexity.ai/api
+
+• Browserbase – sign up at https://browserbase.com, create project 6 (free tier), copy project id and API key.
+
+Stagehand loads MODEL_API_KEY, BROWSERBASE_API_KEY, and BROWSERBASE_PROJECT_ID from the environment to start its cloud-browser sessions. Perplexity calls require PERPLEXITY_API_KEY.
 
 ---
 
